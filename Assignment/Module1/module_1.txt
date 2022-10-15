@@ -1,0 +1,150 @@
+
+
+	What is Software:
+	
+		
+	Software is a set of instructions, data or programs used to operate computers and execute specific tasks. It is the opposite of hardware, which describes the
+	physical aspects of a computer. Software is a generic term used to refer to applications, scripts and programs that run on a device. It can be thought of as 
+	the variable part of a computer, while hardware is the invariable part.
+
+	The two main categories of software are application software and system software. An application is software that fulfills a specific need or performs tasks.
+	System software is designed to run a computer's hardware and provides a platform for applications to run on top of.
+	Other types of software include programming software, which provides the programming tools software developers need; middleware, which sits between system 
+	software and applications; and driver software, which operates computer devices and peripherals.
+
+
+
+
+
+					-------------------------------------------------------------------------------------------
+
+
+
+
+
+	What are the types of Applications:
+
+
+	Application software can broadly be categorized into the following types. The category you opt for depends on your work-related needs.
+
+	 - Web browsers
+	 - Presentation software
+	 - Spreadsheet software
+	 - Graphic software
+	 - Word processors
+	 - Database software
+	 - Multimedia software
+	 - Education software
+	 - Information software
+	 - Content access software
+
+	1)Web browsers-
+	  These types of application software assist the users in accessing websites and conducting research. They help users retrieve information and explore the 
+	  World Wide Web. Prevalent web browsers are Internet Explorer, Chrome, Firefox, MS Edge, Safari, etc. These browsers allow users to access search engines 
+	  like Google, Bing, Yahoo, etc., to conduct research and surf the web.
+
+	
+	2) Presentation software-
+	   This application software is built for personal and professional use. It is designed to assist the users in creating presentations with information and 
+	   ideas. These software applications used by businesses gives the ease of making a presentation at the push of a button. Some of the key elements of 
+	   presentation software are:
+
+           i) Text editor: Presentation software contains the option of a text editor, where one can put their text and style it.
+	  ii) Multimedia files: Presentation software contains the facility of adding and animating graphics, texts, multimedia, and videos.
+	 iii) Slideshows: Presentation software help in conducting a slideshow for the presentation also.
+	  iv) A few famous examples of this are Microsoft’s PowerPoint, Google Slides, and Apple’s Keynote. These presentation applications are essential to creating 
+	      an engaging and informative experience.
+
+
+	3) Spreadsheet software-
+	   Representation of data in tabular form is possible through spreadsheet software. They allow easy calculations through formulas and functions.
+	   Spreadsheet software that helps analyze, store, and organize data. They assist in effortlessly conducting complex calculations and managing data. All the 
+	   data is neatly arranged in rows and columns. Users can use spreadsheet software to perform mathematical calculations. The most used application software
+	   in this field is Microsoft Excel, Google Sheets, and Apple Numbers.
+
+	4) Graphic software-
+	   Graphics software allows easy editing of visual data. It makes room for picture editing and illustration. Graphics software assists users in creating
+	   illustrations and pictures through software. Examples of application software include Adobe Photoshop and PaintShop pro.	
+
+
+	5) Word processors-
+ 	   Word processor software allows formulation, beautification, and manipulation of text. They allow a wide variety of features to make room for effective 
+ 	   text consolidation and editing. This software helps the user input, edit, format, and give text output. Moreover, these types of software help create 
+	   an exquisite visual experience by providing access to a thesaurus, synonyms, etc. Apart from that, the software includes font styles, colors, size, etc.
+
+		Examples of application software are Appleworks, Wordpad, Notepad, Google Docs, Microsoft Word Docs, etc
+
+
+	6) Database software-
+	   Known popularly as database management software, this software helps with effective data management. This software allows easy organization of data and 
+	   effortless access to it. DBMS or Database Management System is an application built for managing, extracting, storing, and searching for information 
+   	   within a single database. While searching DBMS, this software accesses data through modification. A few examples of DBMS are MS Access, Oracle, and MySQL.
+
+	7) Multimedia software-
+	   Such software allows easy creation of audio, video, or pictorial files. They deal with all basic multimedia creation and sharing. They come with a wide 
+	   variety of tools to facilitate the same. This software is specially built to record, create and edit audio and video files. It is a significant part of 
+   	   the entertainment, telecommunications, and media industry.
+           Multimedia software helps in enhancing the visual and auditory experience of any multimedia. Users can combine audio, texts, images, and animations in
+	   multimedia software. 
+
+
+	8) Education software-
+	   Any software that enhances the learning experience is called education software. This kind of software is used in classroom setups where teachers impart 
+	   knowledge to students. For example, education software makes it easier to conduct lectures with visual and auditory experiences to make learning fun and 
+	   easy. Standards of education software include ProProfs, Schoology, Google Classroom, TalentLMS, Litmos, etc.
+           Academic or educational software is designed to take care of learning and tutorials. Functional across various academic domains, they allow easy and
+	   immersive education.
+
+
+
+
+					-------------------------------------------------------------------------------------------
+
+
+
+
+	What is programming-
+
+	Programming is the process of creating a set of instructions that tell a computer how to perform a task. Programming can be done using a variety of computer
+	programming languages, such as JavaScript, Python, and C++
+
+
+
+
+					-------------------------------------------------------------------------------------------
+
+
+
+
+	What is Python -
+
+	Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with 
+        dynamic typing and dynamic binding, make it very attractive for Rapid Application Development. Python supports modules and packages, which encourages 
+	program modularity and code reuse. 
+	The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely 
+        distributed.
+
+
+	Features of Python
+
+	i) Clean syntax plus high-level data types
+       ii) Leads to fast coding (First language in many universities abroad!)		
+      iii) Uses white-space to delimit blocks
+       iv) Humans generally do, so why not the language?
+        v) Try it, you will end up liking it
+       vi) Variables do not need declaration
+      vii)Although not a type-less language
+
+
+
+	   
+
+
+
+
+
+	
+
+
+
+	
