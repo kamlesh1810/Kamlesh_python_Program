@@ -4,4 +4,4 @@ a= int(input("Plz enter your age: "))
 if a<18:
     print("please wait till the age of 18")
 else:
-    print("You can give Vote ")    
+        print("You can give Vote ")    
