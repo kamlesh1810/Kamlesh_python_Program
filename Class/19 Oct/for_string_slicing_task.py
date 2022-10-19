@@ -1,0 +1,18 @@
+#    012345678901234567 --> Positive   (0 to 18) 
+str="Python programming"
+#    876543210987654321   --> Negative (-1 to -18)
+
+print(str) 
+print("Index 1 to 10: ",str[1:10])
+print("Index ' ' to 8: ",str[:8])
+print("Index 6 to 14: ",str[6:14])
+print("Index 2 to 16 with 2 step: ",str[2:16:2])
+print("Index ' ' to ' ' with 4 step:   ",str[::4])
+print()
+print("Negative index number".center(50,"*"))
+print()
+print("Index -17 to -1: ",str[-17:-1])
+print("Index ' ' to -15:  ",str[:-15])
+print("Index -15 to ' ':  ",str[-15:])
+print("Index -8 to -4 with each 2 step: ",str[-8:-4:2])
+print("Reverse string[::-1]: ",str[::-1])
