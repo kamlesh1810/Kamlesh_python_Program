@@ -7,24 +7,25 @@ str = input("Enter a string: ")
 # else:
 #     print(str)
 
+# st = len(str)
 
 if str.endswith("ing") == str.endswith("ing"):
     print(str.replace("ing", "ly"))
-elif len(str) >= 3 :
+elif len(str) <= 3:
     print(str+"ing")
 else:
     print(str)
+
 
 # print("kjsnfsfkms")
 
 # chr = "jfjshfjshf"
 # if chr==45:
-#     print(chr+"ing")
+#     print("Kem bhai",chr+"ing")
 # elif len(chr) > 3:
-#     print(chr+"ing")
+#     print("Elif statemnwt::",chr+"ing")
 # else:
-#     print("fhasas")    
-
+#     print("fhasas")
 
 
 # if len(str)>=3 and str.endswith("ing"):
@@ -33,5 +34,4 @@ else:
 
 
 # chr= str.replace("ing","ly")
-
 # print(len(str))

@@ -1,4 +1,4 @@
-str = "Hey, Ram. Is this your frnd"
+str = "Hey Ram. Is this your frnd"
 print(str)
 chr = str.count("this")
 print("Find substring, which is 'this': ", chr)

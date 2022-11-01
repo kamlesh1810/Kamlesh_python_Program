@@ -7,6 +7,10 @@ while num>=0:
     n=f
     f=sum
     num =num-1
-    print(sum)
+print(sum)
 
 
+#  num =5
+#  n =0 + f= 1  sum = 1
+# 
+# 

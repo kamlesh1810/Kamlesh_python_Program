@@ -1,0 +1,59 @@
+
+
+Q 1) How is memory managed in python?
+
+Ans--> Memory management in Python involves a private heap containing all Python objects and data structures. Interpreter takes care of Python heap and that the programmer has no access to it. The allocation of heap space for Python objects is done by Python memory manager. The core API of Python provides some tools for the programmer to code reliable and more robust program.
+Python also has a build-in garbage collector which recycles all the unused memory. When an object is no longer referenced by the program, the heap space it occupies can be freed. The garbage collector determines objects which are no longer referenced by the sprogram frees the occupied memory and make it available to the heap space.
+The gc module defines functions to enable /disable garbage collector:
+gc.enable() -Enables automatic garbage collection.
+gc.disable() - Disables automatic garbage collection.
+
+
+
+Types of memory allocation:-
+
+i) Static memory:-
+The stack data structure provides static memory allocation, meaning the variables are in the stack memory. 	Statically assigned variables, as the name implies, are permanent; this means that they must be allocated in 	advance and persist for the duration of the program. Another point to remember is that we cannot reuse the memory 	allocated in the stack memory. Therefore, memory reusability is not possible. For example-
+	x = 20
+	y = [] 
+	z = "" 	
+	
+
+ii) Dynamic memory:-
+The dynamic memory allocation uses heap data structures in its implementation, implying that variables are in the heap memory. As the name suggests, dynamically allocated variables are not permanent and can be changed while a program is running. Additionally, allotted memory can be relinquished and reused. However, it takes longer to complete because dynamic memory allocation occurs during program execution. For example-
+	x = [0]*5  #This memory for 5 integers is allocated on heap.  
+
+
+
+
+			--------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Q 2) What is the purpose continue statement in python?
+
+Ans --> Python continue statement: It is used to alter the normal flow of the loop. It forces the loop to continue iteration even after the result is found. It is the opposite of the break statement, i.e. break statement terminates the loop forcefully and the continue statement forces the loop to continue iteration even after getting the required result.
+
+
+
+
+
+			--------------------------------------------------------------------------------------------------------------------------
+
+
+Q 3)  What are negative indexes and why are they used?
+
+Ans --> The sequences in Python are indexed and it consists of the positive as well as negative numbers.The numbers that are positive uses ‘0’ that is uses as first index and ‘1’ as the second index and the process goes on like that.The index for the negative number starts from ‘-1’ that represents the last index in the sequence and ‘-2’ as the penultimate index and the sequence carries forward like the positive number.
+The negative index is used to remove any new-line spaces from the string and allow the string to except the last character that is given as S[:-1]. The negative index is also used to show the index to represent the string in correct order.
+
+
+
+	
+
+			--------------------------------------------------------------------------------------------------------------------------
+
+
+	
+	
