@@ -1,0 +1,1 @@
+This is read/write operation in python using w+

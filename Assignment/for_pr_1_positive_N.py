@@ -1,8 +1,8 @@
 a= int(input("Please enter any number: "))
 if a>=0:
     if a==0:
-        print("The number is equal to zero")
+        print("Entered number is zero plz enter positive or negative number..!")
     else:
         print(a,"is positive number")    
 else:
-    print(a,"is nagetive number")    
+    print(a,"is nagetive number") 

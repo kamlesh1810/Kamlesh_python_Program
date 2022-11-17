@@ -1,16 +1,12 @@
 num = int(input("Enter number which you want to fibonacci series: "))
-n=0
-f=1
-sum=0
-while num>=0:
-    sum=n+f
-    n=f
-    f=sum
-    num =num-1
-print(sum)
-
-
-#  num =5
-#  n =0 + f= 1  sum = 1
-# 
-# 
+n = 0
+f = 1
+sum = 0
+if num < 0:
+    print("plz enter a valid number...")
+else:
+    while sum < num:
+        print(sum)
+        n = f
+        f = sum
+        sum = f+n
