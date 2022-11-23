@@ -1,4 +1,3 @@
-
 file=open("file_handling.txt",'w')
 file.write("This is file management using python ")
 file.close()

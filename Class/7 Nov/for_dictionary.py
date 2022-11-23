@@ -24,9 +24,9 @@ print(d)
 
 
 
-d[5]="Kamal"
-print(d)
+# d[5]="Kamal"
+# print(d)
 
-for i in d:
-    print(i,":",d[i])
+# for i in d:
+#     print(i,":",d[i])
 
