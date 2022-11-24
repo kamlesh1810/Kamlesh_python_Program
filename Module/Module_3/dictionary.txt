@@ -1,0 +1,241 @@
+35
+Q.	How Do You Traverse Through A Dictionary Object In Python?
+
+
+Ans-->	There are multiple ways to iterate over a dictionary in Python.
+
+	  i) Access key using the build .keys() 
+	 ii) Access key without using a key() 
+	iii) Iterate through all values using .values()
+	 iv) Iterate through all key, and value pairs using items()
+	  v) Access both key and value without using items()
+	 vi) Print items in Key-Value in pair 
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	How Do You Check The Presence Of A Key In A Dictionary? 
+
+Ans-->  Use 'in' to see if a key exists.
+	For example:
+		
+	dict = {1:'Raju', 2: 'Laxman', 3: 'Ram', 4: 'Raj', 5: 'Seth', 6: 'Shyam'}
+	print(dict)
+	i=5
+	if i in dict:
+	    print("Key is present in this dictionary")
+	    print("Value =",dict[i])
+	else:
+	    print("Kye is not present in this dictionary...")    
+
+
+
+		O/P: Key is persent in this dictionary
+		     Value = Seth	
+				
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Q. 	Why Do You Use the Zip () Method in Python? 
+
+Ans-->	Because it's takes iterable or containers and returns a single iterator object, having mapped values from all the containers. 
+
+	It is used to map the similar index of multiple containers so that they can be used just using a single entity.
+
+	Syntax :  zip(*iterators) 
+	 
+	Parameters : Python iterables or containers ( list, string etc ) 
+	Return Value : Returns a single iterator object, having mapped values from all the 
+	containers.
+	
+	Example:-
+	name = [ "Kamlesh", "Vikash", "Purvesh", "Chinky" ]
+	roll_no = [ 4, 1, 3, 2 ,5]
+ 
+	# using zip() to map values
+	mapped = zip(name, roll_no)
+ 
+	print(set(mapped))
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	How Many Basic Types Of Functions Are Available In Python? 
+
+Ans-->	There are two types of functions in python:
+
+	i) Built-in Functions - These are pre-defined functions in python.A user has to remember the name and parameters of a 						 particular function. Since these functions are pre-defined, there is no need to define them again.	
+			         Some of the widely used built-in functions are given below:
+
+		Example:
+
+		l = [2, 5, 19, 7, 43]
+		print("Length of string is",len(l))
+		print("Maximum number in list is ",max(l))
+		print("Type is",type(l))
+
+
+		O/P- 	Length of string is 5
+			Maximum number in list is  43
+			Type is <class 'list'>
+
+
+	Some of the widely used python built-in functions are:		
+	
+		Function	Description
+		len()		Returns the length of a python object
+		abs()		Returns the absolute value of a number
+		max()		Returns the largest item in a python iterable
+		min()		Returns the largest item in a python iterable
+		sum()		Returns the sum of all the items in an iterator
+		type()		Returns the type of a python object
+		help()		Executes the python built-in interactive help console
+		input()		Allows the user to give input
+		format()	Formats a specified value
+		bool()		Returns the boolean value of an object
+
+
+
+	 ii) User-Defined Functions - These types of functions are defined by the user to perform any specific task
+		Example:
+	
+		def sub(x, y):
+		    return x-y
+
+		print(sub(6,1))
+
+		O/P- 5
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+Q.	How can you pick a random item from a range?
+
+Ans->
+	Using random.randrange() function
+
+	Algorithm (Steps)
+	1) Use the import keyword, to import the random module.	
+	2) Use the random.randrange() function(Returns a random number within the specified range) to generate a random number within 	   the given range by passing minimum, and maximum numbers as arguments.
+	3) Generate a random number from 1 to 50 alternatively(step-2) by passing start, stop and step values as arguments to the 	   randrange() function.
+
+	Example:
+
+	# importing random module
+	import random
+	print('Random Numbers from 1 to 50 are:')
+
+	# getting a random number from 1 to 50
+	x=random.randrange(1,50)
+	print(x)
+
+	# getting an alternative(odd number) random number from 1 to 50
+	y=random.randrange(1,50,2)
+	print(y)
+
+	O/P:
+	Random Numbers from 1 to 50 are:
+	28
+	9
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+Q.	How can you pick a random item from a list or tuple? 
+
+
+Ans--> Below are the various methods in python to accomplish this task:
+	1) Using random.choice() method
+	2) Using random.randrange()
+	3) Using random.randint() 
+	4) Using random.random()
+	5) Using random.sample() 
+	6) Using random.choices() 
+
+	Like:-
+		import random
+		
+		tpl = (3, 12, "hello", 20, "world", "code")
+		print("The given input tuple: ", tpl)
+		ranItem = random.choice(tpl)
+		print("The generated random tuple item = ", ranItem)
+
+	O/P: 	The given input tuple: 	(3, 12, "hello", 20, "world", "code")
+		The generated random tuple item= code
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Q.	How can you get a random number in python? 
+
+Ans--> 	Using randrange() and randint() functions of a random module, we can generate a random integer within a range. 
+
+	Example: import random
+
+		num1 = random.randint(0, 9)
+		print("Using randint : ",num1)
+
+		num2 = random.randrange(1000, 10000, 2)
+		print("Using randrange : ", num2)
+	
+	O/P:  Using randint : 2
+	      Usind randrange : 51
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Q.	How will you set the starting value in generating random numbers
+
+Ans-->	The seed () method is used to initialize the random number generator. The random number generator needs a number to start with 	(a seed value), to be able to generate a random number. By default the random number generator uses the current system time. 	Use the seed () method to customize the start number of the random number generator.
+
+
+	Example:-import random
+
+		random.seed(5)
+		print(random.random())
+
+	O/P:- 0.6229016948897019
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	How will you randomizes the items of a list in place? 
+
+Ans-->	The method shuffle () can be used to randomize the items of a list in place. It should be noted that this function is not 		accessible directly and therefore we need to import or call this function using random static object. Here, ‘lst’ is passed as 	a parameter which could be a list or tuple. The shuffle () returns a reshuffled list of items.
+	The random module in the Python standard library provides a shuffle() function that returns a sequence with its elements 		randomly placed
+
+
+	Example:- import random 
+		list = [7, 14, 21, 28, 35, 42, 49, 56, 63, 70]
+		print ("Original list : ",  list)
+		random.shuffle(list) #shuffle method
+		print ("List after first shuffle  : ",  list)
+	
+	O/P:	Original list :  [7, 14, 21, 28, 35, 42, 49, 56, 63, 70]
+		List after first shuffle  :  [49, 7, 63, 70, 21, 28, 56, 35, 42, 14]
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+	
+
+
+

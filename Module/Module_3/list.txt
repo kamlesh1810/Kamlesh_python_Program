@@ -1,0 +1,177 @@
+
+1)	What is List? How will you reverse a list?
+
+
+Ans-->  Lists are used to store multiple items in a single variable. Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 	are Tuple, Set, and Dictionary, all with different qualities and usage.
+
+	Lists are created using square brackets:
+	Example 1 : fruits = ['apples', 'oranges', 'pears', 'apricots']
+	Example 2 : fruits = ['apples', 1, 'pears', 2]
+
+	List items are ordered, changeable, and allow duplicate values.	List items are indexed, the first item has index [0], the second item has index [1] etc.
+
+
+
+	There are certain way to reverse list in python:
+	I) Using slicing
+		Ex- list= [10, 11, 12, 13, 14, 15]
+		print(list[ : : -1]    #O/P -->  [15, 14, 13, 12, 11, 10]
+
+	II) Using the reversed() and reverse() built-in function. Using reversed() we can reverse the list and a list_reverseiterator object is created, from which we can create a list using list() type casting. Or, we can also use list.reverse() function to reverse list in-place.
+
+            Ex- lst = [10, 11, 12, 13, 14, 15]
+		lst.reverse()
+		print("Using reverse() ", lst)
+		print("Using reversed() ", list(reversed(lst)))
+
+
+
+		O/P:-
+		Using reverse()  [15, 14, 13, 12, 11, 10]
+		Using reversed()  [10, 11, 12, 13, 14, 15]
+
+
+
+
+
+
+
+	-----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+2)      How will you remove last object from a list? 
+	Suppose list1 is [2, 33, 222, 14, and 25], what is list1 [-1]?
+
+Ans-->  For removing last element from list, we can use-
+
+	1. Using pop():-
+	The simplest way to remove last element from list in Python is to use the pop() method. It accepts the optional index argument, which is used 	to delete an element in that position. If no arguments are passed to the pop() method, then the last element is removed from the list and 	returned as the result of a function call.
+
+		list1 = [2, 33, 222, 14, 25]
+		list1.pop()
+		print(list1)
+	O/P:
+	[2, 33, 222, 14]
+
+
+
+	2. Using slicing:-
+	Python lists can be sliced. Slicing a list means extracting part of that list based on a defined range. So if we extract everything except the last element of a list, that can serve as a deletion technique. 
+
+		list1 = [2, 33, 222, 14, 25]
+		print(list1[ : -1])
+
+	O/P:
+	[2, 33, 222, 14]	
+
+
+
+
+	3. Using del keyword:-
+	It can come in handy when you need to get rid of any object in Python. The same applies to the elements of a list. All you have to do is type the del keyword before the list element accessed via index. If index is -1, del will remove the last element in a list
+
+
+		list1 = [2, 33, 222, 14, 25]
+		del list1[2]
+		print(list1)
+					
+	O/P:
+	[2, 33, 14, 25]
+	
+
+	[-1] means the last element in a sequence.
+
+
+
+	-----------------------------------------------------------------------------------------------------------------------
+
+
+
+3)	Differentiate between append () and extend () methods?	
+Ans->			Append()								extend()		
+	I)  Adds the input as a single element to a list.			 Adds multiple elements to a list.	
+	II) Length increases by 1.						 Length increases by the number of elements added.
+
+
+
+
+	-----------------------------------------------------------------------------------------------------------------------
+
+
+
+4)	How will you compare two lists? 	
+Ans-->	We’ll compare the following ways to compare the list:
+
+	By == Operator
+	the set() method
+	The sort() function
+	The collection.counter() function
+
+
+	i)Compare Operator:
+	We can compare two lists using compare operator. You can compare the two lists using “==” operator, it returns True if all the 	elements in the lists are the same and in the same order.
+
+	a = [6, 5, 1, 2]
+	b = [6, 5, 1, 2]
+
+	print(a==b)
+	
+	O/P:	True
+
+
+
+	ii) set() Method to compare two Lists
+	Python set() method manipulates the list into the set without taking care of the order of elements. We use the equal to 	operator (==) to compare the data items of the list.
+
+
+	a = [6, 5, 1, 2]
+	b = [6, 5, 1, 2]
+
+	l1 = set(a)  
+	l2 = set(b)  
+  
+	if l1 == l2:  
+	    print("The a and b are equal")  	
+	else:  
+	    print("The a and b are not equal")
+
+
+	O/P:	The a and b are equal
+
+
+
+	iii) sort() Method to compare two Lists
+	The python sort() function is used to sort the lists. The same list’s elements are the same index 	position it means; 	lists are equal.4
+
+
+	a = [6, 5, 1, 2]
+	b = [6, 5, 1, 2]
+
+	a.sort()  
+	b.sort()  
+  
+	if a == b:  
+	    print("The a and b are equal")  
+	else:  
+	    print("The a and b are not equal")
+
+	O/P:	The a and b are equal
+
+
+	iv) collection.counter() Method to compare two Lists
+	The Python collection module has counter() function, which is used to compare the lists. It stores the data in dictionary 	format : and counts the frequency of the list’s items.	
+
+	import collections
+	a = [6, 5, 1, 2]
+	b = [6, 5, 1, 2] 
+  
+	if collections.Counter(a) == collections.Counter(b):   
+	    print("The a and b are equal")  
+	else:  
+	    print("The a and b are not equal")
+
+
+	O/P:	The a and b are equal

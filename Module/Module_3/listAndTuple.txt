@@ -1,0 +1,17 @@
+
+Q.	 What is tuple? Difference between list and tuple.
+
+Ans-> Tuple: 	Tuples are used to store multiple items in a single variable. Tuple is one of 4 built-in data types in Python used to 			store collections of data, the other 3 are List, Set, and Dictionary, all with different qualities and usage.A tuple 		is a collection which is ordered and unchangeable.
+
+
+
+
+
+	 		LIST								TUPLE
+1	Lists are mutable						Tuples are immutable
+2	The implication of iterations is Time-consuming			The implication of iterations is comparatively Faster
+3	The list is better for performing operations, such
+	as insertion and deletion.					Tuple data type is appropriate for accessing the elements
+4	Lists consume more memory					Tuple consumes less memory as compared to the list	
+5	The unexpected changes and errors are more likely to occur	In tuple, it is hard to take place.
+	Lists have several built-in methods				Tuple does not have many built-in methods

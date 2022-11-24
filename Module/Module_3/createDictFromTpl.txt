@@ -1,0 +1,12 @@
+Q.	How will you create a dictionary using tuples in python?
+
+Ans->	
+# one value is age of student
+# second value is student name
+data = ((101, "Hello"), (201, "Dear"))
+  
+# convert into dictionary
+final = dict((value, key) for key, value in data)
+  
+# display
+print(final)

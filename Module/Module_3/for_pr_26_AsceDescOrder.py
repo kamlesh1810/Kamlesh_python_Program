@@ -1,0 +1,7 @@
+import operator
+dic = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0,}
+print('Original dictionary : ',dic)
+sorted_d = sorted(dic.items(), key=operator.itemgetter(1))
+print('Dictionary in ascending order by value : ',sorted_d)
+sorted_d = dict( sorted(dic.items(), key=operator.itemgetter(1),reverse=True))
+print('Dictionary in descending order by value : ',sorted_d)
