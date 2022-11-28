@@ -1,0 +1,56 @@
+html:  hyper text markup language
+
+using of html we can struct web pages
+
+which is devided in two parts:
+
+head and body
+
+syntax: 
+
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+
+</html>
+
+
+there are two tags in html
+
+singular tag there are only 3 tags in singular tag
+
+<br> : break
+<hr> : horizontal row
+<img> : image
+
+
+paired tags
+
+
+<openingtag>...content goes here...</openingtag>
+
+
+
+there are three types of list
+    
+ul: unordered list
+ol: ordered list
+dl: description list
+
+
+<ul>
+    <li>    content     </li>
+</ul>
+
+
+<ol>
+    <li>    content     </li>
+</ol>
+
+<dl>
+    <dt>Description tag</dt>
+    <dd>description details</dd>
+</dl>
+
