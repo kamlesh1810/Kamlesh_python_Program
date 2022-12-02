@@ -25,9 +25,10 @@ labl_3 = Label(base, text="Gender", width=20, font=("bold", 10))
 labl_3.place(x=70, y=230)
 
 v = StringVar(base,"none")
-Radiobutton(base,text="Male", variable=v,value="1").place(x=235,y=230)
-Radiobutton(base,text="Female",variable=v,value="2").place(x=290,y=230)
-Radiobutton(base,text="Other",variable=v,value="3").place(x=356,y=230)
+Radiobutton(base,text="Male", variable=v ,value="1").place(x=235,y=230)
+Radiobutton(base,text="Female",variable=v ,value="1").place(x=290,y=230)
+Radiobutton(base,text="Other",variable=v ,value="1").place(x=356,y=230)
+
 
 labl_4 = Label(base, text="Age:", width=20, font=("bold", 10))
 labl_4.place(x=70, y=280)

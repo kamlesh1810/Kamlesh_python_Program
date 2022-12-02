@@ -4,7 +4,7 @@ import tkinter.messagebox as msg
 
 root =Tk()
 root.geometry("500x420")
-root.resizable(width=False,height=False)
+root, root.resizable(width=False,height=False)
 
 
 
@@ -15,19 +15,19 @@ id=Label(text="ID : ")
 id.place(x=80,y=50)
 # id.pack()
 
-fName=Label(text="First Name : ")
+fName=Label(root, text="First Name : ")
 fName.place(x=80,y=100)
 # fName.pack()
 
-lName=Label(text="Last Name : ")
+lName=Label(root, text="Last Name : ")
 lName.place(x=80,y=150)
 # lName.pack()
 
-email=Label(text="Email : ")
+email=Label(root, text="Email : ")
 email.place(x=80,y=200)
 # email.pack()
 
-mNo=Label(text="Mobile : ")
+mNo=Label(root, text="Mobile : ")
 mNo.place(x=80,y=250)
 # mNo.pack()
 

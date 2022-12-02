@@ -1,6 +1,6 @@
 '''
 OOP --> Object oriented programming 
-1) Encapsulation  2)Inheritance  3) Polymorphism  4) DAta Abstraction
+1) Encapsulation  2)Inheritance  3) Polymorphism  4) Data Abstraction
 
 '''
 

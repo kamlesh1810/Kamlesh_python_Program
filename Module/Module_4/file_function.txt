@@ -1,0 +1,317 @@
+	
+
+Q.	What is File function in python?
+
+Ans-	The key function for working with files in Python is the open() function.The open() function takes two parameters; filename, 	and mode.
+
+	There are four different methods (modes) for opening a file:
+
+	"r" - Read - Default value. Opens a file for reading, error if the file does not exist
+
+	"a" - Append - Opens a file for appending, creates the file if it does not exist
+
+	"w" - Write - Opens a file for writing, creates the file if it does not exist
+
+	"x" - Create - Creates the specified file, returns an error if the file exists
+
+
+	Syntax: 
+	To open a file for reading it is enough to specify the name of the file:
+
+	f = open("demofile.txt")
+
+	Write Only (‘w’) : Open the file for writing. For an existing file, the data is truncated and over-written. The handle is 	positioned at the beginning of the file. Creates the file if the file does not exist. Write and Read (‘w+’) : Open the file 	for reading and writing.
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Q.	Explain Exception handling? What is an Error in Python? 
+
+
+Ans:-	Exception handling: Exceptions are events that are used to modify the flow of control through a program when the error occurs. 			    Exceptions get triggered automatically on finding errors in Python.
+
+
+	These exceptions are processed using five statements. These are:
+	1) try/except: catch the error and recover from exceptions hoist by programmers or Python itself.
+	2) try/finally: Whether exception occurs or not, it automatically performs the clean-up action.
+	3) assert: triggers an exception conditionally in the code.
+	4) raise: manually triggers an exception in the code.
+	5) with/as: implement context managers in older versions of Python such as - Python 2.6 & Python 3.0.
+
+
+
+	Error:- As the name suggests this error is caused by the wrong syntax in the code. It leads to the termination of the program. 
+
+	ex:
+	
+		amount = 10000
+ 		# check that You are eligible to
+		#  purchase Dsa Self Paced or not
+		if(amount > 2999)
+		print("You are eligible to purchase Dsa Self Paced")
+
+
+	o/p:	File "/home/ac456484314f3c6565613346556154.py", line 4
+		if(amount>2999)
+			      ^	
+		SystemError: invalid syntax 
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+Q.	How many except statements can a try-except block have? Name Some built-in exception classes:
+
+Ans:-	A try () block can have more than one except clause. Whenever is there is no exception is occurred then only try block will 	run, and except clause is finished, and if exceptions occur, then the try clauses will be skipped and execute except clause.
+
+
+	Built-in exception classes:
+			Exception			Description
+		
+			ArithmeticError		-	Raised when an error occurs in numeric calculations
+			ImportError		-	Raised when an imported module does not exist
+			IndexError		-	Raised when an index of a sequence does not exist
+			NameError		-	Raised when a variable does not exist
+			OverflowError		-	Raised when the result of a numeric calculation is too large
+			OverflowError		-	Raised when the result of a numeric calculation is too large
+			OverflowError		-	Raised when the result of a numeric calculation is too large
+			ZeroDivisionError	-	Raised when the second operator in a division is zero
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	When will the else part of try-except-else be executed? 
+
+Ans:-	Else block will execute only when no exception occurs.
+
+	Example: 
+		def divide(x, y):
+		    try:
+		       result = x // y
+		    except ZeroDivisionError:
+		        print("You are dividing by zero ")
+		    else:
+		        print("Your answer is :", result)
+ 
+		divide(4, 2)
+		divide(5, 0)
+
+
+
+	Output:
+
+		 Your answer is : 1
+		 You are dividing by zero 
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	Can one block of except statements handle multiple exception? 
+
+Ans:- 	Yes
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	When is the finally block executed?
+
+Ans:-	finally block is always executed after leaving the try statement. In case if some exception was not handled by except block, 	it is re-raised after execution of finally block. finally block is used to deallocate the system resources.
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	What happens when „1‟== 1 is executed? 	
+
+Ans:-	False, It simply evaluates to False and does not raise any exception. because one is string and other is integer
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Q.	How Do You Handle Exceptions With Try/Except/Finally In Python? Explain with coding snippets
+
+Ans:	Exception handling with try, except, else, and finally:-
+	
+	1) Try: This block will test the excepted error to occur
+	2) Except:  Here you can handle the error
+	3) Else: If there is no exception then this block will be executed
+	4) Finally: Finally block always gets executed either exception is generated or not
+
+	
+	Let’s first understand how the try and except works –
+
+	  i) First try clause is executed i.e. the code between try and except clause.
+	 ii) If there is no exception, then only try clause will run, except clause will not get executed.
+	iii) If any exception occurs, the try clause will be skipped and except clause will run.
+	 iv) If any exception occurs, but the except clause within the code doesn’t handle it, it is passed on to the outer try 	     	     statements. If the exception is left unhandled, then the execution stops.
+	  v) A try statement can have more than one except clause.
+
+
+	Example:
+		
+	print("Enter a Number to Print its Table: ", end="")
+	try:
+	    num = int(input())
+	    print("\nTable of", num, ":")
+	    for i in range(1, 10+1):
+	        print(i*num)
+	except ValueError:
+	    print("\nInvalid Input.")
+	finally:
+	    print("\nProgram finished.")
+
+
+	O/P: Enter a Number to print its Table: 2
+	Table of 2 :
+	2
+	4
+	6
+	8
+	10
+	12
+	14
+	16
+	18
+	20
+	Program finished.
+
+	And the snapshot given below shows another sample run with user input $
+
+	Enter a Number to print its table: #
+	Invalid Input.
+	Program finished
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	What are oops concepts? Is multiple inheritance supported in java
+
+Ans:-	OOPs (Object-Oriented Programming System)
+	Object means a real-world entity such as a pen, chair, table, computer, watch, etc. Object-Oriented Programming is a 	methodology or paradigm to design a program using classes and objects. It simplifies software development and maintenance by 		providing some concepts:	
+
+	1) Object:-
+	Any entity that has state and behavior is known as an object. For example, a chair, pen, table, keyboard, bike, etc. It can be 	physical or logical.
+	An Object can be defined as an instance of a class. An object contains an address and takes up some space in memory.
+	
+	2) Class:-	
+	Collection of objects is called class. It is a logical entity.
+	
+	3) Inheritance: -  It is creating  a new class from an already existing class
+	4) Polymorphism:-  If one task is performed in different ways, it is known as polymorphism. For example: to convince the 			   	   customer differently, to draw something, for example, shape, triangle, rectangle, etc.
+	5) Abstraction :-  Hiding internal details and showing functionality is known as abstraction. For example phone call, we don't 			   know the internal processing.
+	6) Encapsulation:- Binding (or wrapping) code and data together into a single unit are known as encapsulation. For example, a 			   capsule, it is wrapped with different medicines.
+
+
+
+	
+
+	Is multiple inheritance supported in java:
+	
+	No,Java does not support multiple inheritance. This means that a class cannot extend more than one class.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Q.	How to Define a Class in Python? What Is Self? Give An Example Of A Python Class
+
+Ans:-	Python is an object oriented programming language.Almost everything in Python is an object, with its properties and methods.   	A Class is like an object constructor, or a "blueprint" for creating objects.
+
+
+	Create a Class:-
+	To create a class, use the keyword class:
+
+	Example
+	Create a class named Demowith a property named a:
+
+	class Demo:
+		a = 5
+
+
+	Self in class:
+	self represents the instance of the class. By using the “self”  we can access the attributes and methods of the class in 	python. It binds the attributes with the given arguments.
+	
+
+	Ex:
+	class Person:
+		def __init__(self, name, age):
+		    self.name = name
+		    self.age = age
+
+	obj1 = Person("Ram", 21)
+
+	print(obj1.name)
+	print(obj1.age)
+
+	O/P:
+	Ram
+	21
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+	
+
+Q.	What is Instantiation in terms of OOP terminology? 
+
+Ans-->	Instantiation is a computer programming term, used by developers, that is usually related to Object-Oriented Programming 	(OOP). At its core, instantiation is the process of creating an Instance of an Object. Objects are structures created by 	Classes, which are essentially blueprints – or templates – that describe a set of features that will belong to Objects created 	from them. These “features” include Properties – also known as variables – and Methods.
+
+	Properties can be viewed as data that describes the Objects that can be created from the Class. For example, you may have a 	Class that represents a certain type of car. The properties, in this instance, could include the color, the style, how many 	doors the car has, and so forth.
+	
+	Methods, meanwhile, are essentially functions that define the types of behaviors the Objects can take. In our car example, we 	could say that a car could: go forward, in reverse, stop, turn, speed up, and slow down.
+
+	Creating a new instance of a class (i.e.; an Object) is known as instantiation.
+
+	Instantiation is also a term used to describe the process of creating virtual servers. When virtual servers are created, 	certain properties or specs are defined, such as how much RAM, disk space, and which operating system the server will run. 	Once this setup is configured, multiple servers are able to be “virtualized” on one computer. This, too, is known as 	instantiation. Each virtual server, in this scenario, would be called an instance.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	What is used to check whether an object o is an instance of class A? 
+
+Ans--> 	The isinstance()  function  checks  if  the  object  (first argument)  is  an  instance  or  subclass  of classinfo class 
+	(second argument). Return Value : true if the object is an instance or subclass of a class, or any element of the tuple false 		otherwise.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	What relationship is appropriate for Course and Faculty?
+
+Ans-->	Participation is usually required and is formally built into course grades. It can also help your professor get to know you. 	By participating, you demonstrate your understanding of course material and how you think about what you are learning. This 	helps your professor to see you as a scholar and shows that you are engaged in what is happening during class.
+
+	Active participation includes asking questions. It is common for students to feel afraid to ask questions, and you might 	assume that everyone else understands things better than you do. But this is probably not the case.  
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	What relationship is appropriate for Student and Person? 
+
+Ans-->	
+
+
+
+
+
+
+
+
+
+
+
