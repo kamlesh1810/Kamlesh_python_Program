@@ -3,7 +3,7 @@ print("Before Appanding file's content : ",f.read())
 f.close()
 
 f=open("file.txt",'a')
-f.write(" Form Rajasthan")
+f.write(" Rajasthan")
 
 f.close()
 

@@ -1,12 +1,10 @@
-import sys
-
 num = int(input("Enter a number: "))
 
 try:
     if num%2!=0:
         print("Entered number is odd",num)
-except Exception as e:
-    print("Plz enter only odd number",e.__class__) 
+except :
+    print("Plz enter only odd number") 
 else:
     pass        
 finally:

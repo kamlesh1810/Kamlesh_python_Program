@@ -1,2 +1,1 @@
-Hello Dear
-This is second file
+This contain from second file

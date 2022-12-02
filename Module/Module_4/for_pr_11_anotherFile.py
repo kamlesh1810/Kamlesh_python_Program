@@ -1,20 +1,16 @@
-file1=input("Enter the name of first file : ")
-file2=input("Enter the name of second file : ")
-
-
-f1=open(file1,'r')
-f2=open(file2,'r')
+f1=open('file1.txt','r')
+f2=open('file2.txt','r')
 
 print("Content of first file before appending : ",f1.read())
-print("Content of second file before appending : ",f2.read())
+print("Content of second file before appending :\n",f2.read())
 
 
 f1.close()
 f2.close()
 
 
-f1=open(file1,'a+')
-f2=open(file2,'r')
+f1=open('file1.txt','a+')
+f2=open('file2.txt','r')
 
 f1.write(f2.read())
 

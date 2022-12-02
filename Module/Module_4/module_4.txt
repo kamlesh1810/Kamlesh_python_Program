@@ -1,8 +1,9 @@
 	
 
-Q.	What is File function in python?
+Q.	What is File function in python? What is keywords to create and writefile.
 
-Ans-	The key function for working with files in Python is the open() function.The open() function takes two parameters; filename, 	and mode.
+Ans-	File handling:-
+	The key function for working with files in Python is the open() function.The open() function takes two parameters; filename, 		and mode.
 
 	There are four different methods (modes) for opening a file:
 
@@ -243,7 +244,7 @@ Ans:-	Python is an object oriented programming language.Almost everything in Pyt
 
 
 	Self in class:
-	self represents the instance of the class. By using the “self”  we can access the attributes and methods of the class in 	python. It binds the attributes with the given arguments.
+	self represents the instance of the class. By using the “self”  we can access the attributes and methods of the class in 		python. It binds the attributes with the given arguments.
 	
 
 	Ex:
@@ -268,15 +269,15 @@ Ans:-	Python is an object oriented programming language.Almost everything in Pyt
 
 Q.	What is Instantiation in terms of OOP terminology? 
 
-Ans-->	Instantiation is a computer programming term, used by developers, that is usually related to Object-Oriented Programming 	(OOP). At its core, instantiation is the process of creating an Instance of an Object. Objects are structures created by 	Classes, which are essentially blueprints – or templates – that describe a set of features that will belong to Objects created 	from them. These “features” include Properties – also known as variables – and Methods.
+Ans-->	Instantiation is a computer programming term, used by developers, that is usually related to Object-Oriented Programming 		(OOP). At its core, instantiation is the process of creating an Instance of an Object. Objects are structures created by 		Classes, which are essentially blueprints – or templates – that describe a set of features that will belong to Objects created 	from them. These “features” include Properties – also known as variables – and Methods.
 
-	Properties can be viewed as data that describes the Objects that can be created from the Class. For example, you may have a 	Class that represents a certain type of car. The properties, in this instance, could include the color, the style, how many 	doors the car has, and so forth.
+	Properties can be viewed as data that describes the Objects that can be created from the Class. For example, you may have a 		Class that represents a certain type of car. The properties, in this instance, could include the color, the style, how many 		doors the car has, and so forth.
 	
-	Methods, meanwhile, are essentially functions that define the types of behaviors the Objects can take. In our car example, we 	could say that a car could: go forward, in reverse, stop, turn, speed up, and slow down.
+	Methods, meanwhile, are essentially functions that define the types of behaviors the Objects can take. In our car example, we 		could say that a car could: go forward, in reverse, stop, turn, speed up, and slow down.
 
 	Creating a new instance of a class (i.e.; an Object) is known as instantiation.
 
-	Instantiation is also a term used to describe the process of creating virtual servers. When virtual servers are created, 	certain properties or specs are defined, such as how much RAM, disk space, and which operating system the server will run. 	Once this setup is configured, multiple servers are able to be “virtualized” on one computer. This, too, is known as 	instantiation. Each virtual server, in this scenario, would be called an instance.
+	Instantiation is also a term used to describe the process of creating virtual servers. When virtual servers are created, 		certain properties or specs are defined, such as how much RAM, disk space, and which operating system the server will run. 		Once this setup is configured, multiple servers are able to be “virtualized” on one computer. This, too, is known as 		instantiation. Each virtual server, in this scenario, would be called an instance.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------
@@ -293,9 +294,9 @@ Ans--> 	The isinstance()  function  checks  if  the  object  (first argument)  i
 
 Q.	What relationship is appropriate for Course and Faculty?
 
-Ans-->	Participation is usually required and is formally built into course grades. It can also help your professor get to know you. 	By participating, you demonstrate your understanding of course material and how you think about what you are learning. This 	helps your professor to see you as a scholar and shows that you are engaged in what is happening during class.
+Ans-->	Participation is usually required and is formally built into course grades. It can also help your professor get to know you. 		By participating, you demonstrate your understanding of course material and how you think about what you are learning. This 		helps your professor to see you as a scholar and shows that you are engaged in what is happening during class.
 
-	Active participation includes asking questions. It is common for students to feel afraid to ask questions, and you might 	assume that everyone else understands things better than you do. But this is probably not the case.  
+	Active participation includes asking questions. It is common for students to feel afraid to ask questions, and you might 		assume that everyone else understands things better than you do. But this is probably not the case.  
 
 
 -------------------------------------------------------------------------------------------------------------------------------------
@@ -303,11 +304,11 @@ Ans-->	Participation is usually required and is formally built into course grade
 
 Q.	What relationship is appropriate for Student and Person? 
 
-Ans-->	
+Ans-->	Relationship to student can mean a few different things. The most common interpretation is just how a person knows the 		student. In Pretty Little Liars how does Ezra get fired? Because he was having a relationship with a student (aria) and that 		is against the law to have a relationship with a student if your a teacher.
 
 
 
-
+-------------------------------------------------------------------------------------------------------------------------------------
 
 
 
