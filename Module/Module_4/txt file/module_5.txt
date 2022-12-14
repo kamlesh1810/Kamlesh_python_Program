@@ -1,0 +1,90 @@
+Q.	Why Django should be used for web-development? Explain how you can create a project in Django?
+
+Ans-->	Django is a highly powerful framework for building small and large scale web applications. Being a Python-based framework, 		Django for web development is the preferred choice of companies all over the world. Django is a highly powerful framework for 		building small and large scale web applications. Being a Python-based framework, Django for web development is the preferred 		choice of companies all over the world.
+
+	Steps to create a Project in Django:-
+	Step 1: Open the Window PowerShell/command prompt
+	Step 2: pip install virtualenv
+	Step 3: virtualenv -p python <environment_name>
+	Step 4: cd <environment_name>
+	Step 5: \Scripts\activate	Step 6: pip install django
+	Step 7: django-admin startproject <project_name>
+	Step 8: Running the Test Server	(python manage.py runserver)
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Q.	How to check installed version of Django?
+
+Ans-->	1) Using python bin:
+	   $ python -m django --version
+	   3.0.5
+
+	
+	2) Using pip freeze:
+   	   $ pip freeze
+	   asgiref==3.2.7
+	   Django==3.0.5
+	   pytz==2020.1
+	   sqlparse==0.3.1
+	(This method gives you all python packages that you installed. To see only Django:)
+	
+	$ pip freeze | grep Django
+	Django==3.0.5
+
+	3) Using pip show:
+	
+	$ pip show django
+	Name: Django
+	Version: 3.0.5
+	Summary: A high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+	Home-page: https://www.djangoproject.com/
+	Author: Django Software Foundation
+	Author-email: foundation@djangoproject.com
+	License: BSD
+	Location: /home/serhat/tmp/django/.venv/lib/python3.8/site-packages
+	Requires: pytz, asgiref, sqlparse
+	Required-by:
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+Q.	Explain what does django-admin.py make messages command is used for? 
+
+Ans-->	 This command line executes over the entire source tree of the current directory and abstracts all the strings marked for 		translation. It makes a message file in the locale directory.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q. 	What is Django URLs?make program to create django urls?
+
+Ans-->	URL is a path through which a specific web-based application and one particular page in that web application can be reached. 	So for any web-oriented application setting these url paths is a very key necessity. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+
+		
+	

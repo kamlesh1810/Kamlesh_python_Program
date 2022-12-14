@@ -6,3 +6,5 @@ max = len(max(wrds, key=len))
 
 rslt = [word for word in wrds if len(word) == max]
 print(*rslt)
+
+
