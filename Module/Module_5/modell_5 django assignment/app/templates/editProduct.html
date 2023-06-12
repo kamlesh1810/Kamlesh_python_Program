@@ -1,0 +1,101 @@
+﻿{% extends 'index.html' %}
+
+{% block content %}
+
+<section class="content home">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <h2>MJ cafe <small class="text-muted">Welcome to {{ aid.shopName}}</small></h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <form action="{% url 'updateProduct'  %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="card">
+                        {% if e_msg %}
+                        <div class="alert alert-primary" role="alert">
+                            {{e_msg}}
+                        </div>
+                        {% endif %}
+                        <div class="header">
+                            <h2><strong>Edit</strong> Product <small></small> </h2>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="hidden" class="form-control" value="{{pid.id}}" name="id">
+                                        <input type="text" class="form-control" value="{{pid.productName}}" placeholder="Product Name" name="productName">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input list="category_list" class="form-control" placeholder="Select Category"
+                                            name="category_id" value="{{pid.brand}}">
+                                        <datalist id="category_list">
+                                            {% for i in pall%}
+                                            <option value="{{i.brand}}">
+                                                {% endfor %}
+                                        </datalist>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" value="{{pid.price}}" placeholder="Product Details" name="price">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" value="{{pid.ram}}" placeholder="RAM" name="ram">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Screen Size" value="{{pid.screenSize}}" name="screenSize">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Battery Capacity" value="{{pid.batteryCapacity}}" name="batteryCapacity">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="CUP" value="{{pid.CPU}}" name="CPU">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="SIM" value="{{pid.sim}}" name="sim">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" name="pic" value="{{pid.pic}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-sm-4">
+                                    <input type="submit" class="btn btn-primary btn-round" name="" value="Update">
+                                    <!-- <input type="submit" class="btn btn-primary btn-round" name="" value="Submit"> -->
+                                    <a href="{% url 'allProduct'%}" class="btn btn-primary btn-round">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

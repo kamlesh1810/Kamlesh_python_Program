@@ -1,0 +1,64 @@
+﻿{% extends 'index.html' %}
+
+{% block content %}
+
+<section class="content home">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <h2>All Product <small class="text-muted">Welcome to {{ aid.shopNames}}</small></h2>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <form action="{% url 'searchProduct' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input list="category_list_search" placeholder="Select Brand" name="category_id_search">
+                        <datalist id="category_list_search">
+                            {% for i in pall %}
+                            <option value="{{i.brand}}">
+                                {% endfor %}
+                        </datalist>
+                        <input type="submit" name="submit" value="Search">
+                    </div>
+                </form>
+                <div class="tab-content m-t-10">
+                    <div class="tab-pane active" id="Permanent">
+                        <div class="row clearfix">
+
+                            {% for i in pall %}
+                            <div class="col-lg-3 col-md-4 col-sm-6">
+                                <div class="card xl-blue member-card doctor">
+                                    <div class="body">
+                                        <div class="member-thumb">
+                                            <img src="{{ i.pic.url}}" class="img-fluid" alt="profile-image">
+                                        </div>
+                                        <div class="detail">
+                                            <h4 class="m-b-0">{{i.productName}}</h4>
+                                            <p class="text-muted">{{i.brand}}</p>
+                                            <p class="text-danger"> Rs. {{i.price}}</p>
+                                            <p class="text-muted">{{i.ram}}</p>
+                                            <a href="{% url 'editProduct' pk=i.id %}" class="btn btn-default btn-round btn-simple">Edit</a>
+                                            <a href="{% url 'deleteProduct' pk=i.id %}" class="btn btn-default btn-round btn-simple">Delete</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

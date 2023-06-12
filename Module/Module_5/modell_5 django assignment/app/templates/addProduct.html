@@ -1,0 +1,98 @@
+﻿{% extends 'index.html' %}
+
+{% block content %}
+
+<section class="content home">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <h2>MJ cafe <small class="text-muted">Welcome to {{aid.cafeName}}</small></h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <form action="{% url 'addProduct' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <div class="card">
+                        {% if e_msg %}
+                        <div class="alert alert-primary" role="alert">
+                            {{e_msg}}
+                        </div>
+                        {% endif %}
+                        <div class="header">
+                            <h2><strong>Add</strong> Product <small></small> </h2>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Brand" name="brand">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">    
+                                        <input type="text" class="form-control" placeholder="Product Name" name="productName">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Ram" name="ram">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Screen Size" name="screenSize">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Battery Capacity" name="batteryCapacity">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="CPU" name="cpu">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Amount" name="price">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="sim" placeholder="SIM Configuration">
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" name="pic">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-sm-12">
+                                    <input type="submit" class="btn btn-primary btn-round" name="" value="Submit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,204 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="csrf-token" content="iL8hUXsdXy71MbOZjq4fWUv4KGPZnJ7k17P7RClL">
+    <link rel="icon" href="https://thememakker.com/templates/oreo/hospital/laravel/public/favicon.ico"
+        type="image/x-icon"> <!-- Favicon-->
+    <title>Dashboard - Oero Laravel</title>
+    <meta name="description" content="Oero Laravel">
+    <meta name="author" content="Oero Laravel">
+
+
+    <link rel="stylesheet" href="{% static 'app\assets\plugins\bootstrap\css\bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app\assets\plugins\jvectormap\jquery-jvectormap-2.0.3.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app\assets\plugins\morrisjs\morris.min.css' %}">
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="{% static 'app\assets\css\main.css' %}">
+    <link rel="stylesheet" href="{% static 'app\assets\css\color_skins.css' %}">
+</head>
+
+<body class="theme-cyan">
+    <!-- Page Loader -->
+    
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <nav class="navbar p-l-5 p-r-5">
+        <ul class="nav navbar-nav navbar-left">
+            <li>
+                <div class="navbar-header">
+                    <a href="javascript:void(0);" class="bars"></a>
+                    <a class="navbar-brand" href="index.html"><span class="m-l-10">{{aid.shopName}}</span></a>
+                </div>
+            </li>
+            <li><a href="javascript:void(0);" class="ls-toggle-btn" data-close="true"><i class="zmdi zmdi-swap"></i></a>
+            </li>
+            
+            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                    role="button"><i class="zmdi zmdi-notifications"></i>
+                    <div class="notify"><span class="heartbit"></span><span class="point"></span></div>
+                </a>
+               
+            </li>
+            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                    role="button"><i class="zmdi zmdi-flag"></i>
+                    <div class="notify">
+                        <span class="heartbit"></span>
+                        <span class="point"></span>
+                    </div>
+                </a>
+                
+            </li>
+            <li class="float-right">
+                <a href="{% url 'logout' %}" class="mega-menu" data-close="true"><i class="zmdi zmdi-power"></i></a>
+                <!-- <a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i
+                        class="zmdi zmdi-settings zmdi-hc-spin"></i></a> -->
+            </li>
+        </ul>
+    </nav> <!-- Left Sidebar -->
+    <aside id="leftsidebar" class="sidebar">
+
+        <div class="tab-content">
+            <div class="tab-pane stretchRight active" id="dashboard">
+                <div class="menu">
+                    <ul class="list">
+                        <li>
+                            <div class="user-info">
+                                {% if uid.role == 'admin' %}
+                                <div class="image">
+                                    <a href="">
+                                        <img src="{{ aid.pic.url }}" alt="User">
+                                    </a>
+                                    <h4>{{aid.name}}</h4>
+                                    <small>{{aid.contact}}</small>
+                                    <br>
+                                    <small>{{uid.email}}</small>
+                        <li class="header">MAIN</li>
+                        <li class=""><a href="{% url 'home' %}"><i
+                                    class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+                        <li class=""><a href="{% url 'profile' %}">
+                                        <i class="zmdi zmdi-account"></i><span>My Profile</span></a></li>
+                        <li class="">
+                            <a href="javascript:void(0);" class="menu-toggle"><i
+                                    class="zmdi zmdi-account-add"></i><span>My
+                                    Product</span></a>
+                            <ul class="ml-menu">
+                                <li class=""><a href="{% url 'allProduct'%}">All Product</a></li>
+                                <li class=""><a href="{% url 'addProduct' %}">Add Product</a></li>
+                            </ul>
+                        </li>
+                </div>
+                {% else %}
+                <!-- <div class="detail">
+                    <div class="image">
+                        <a href="">
+                            <img src="" alt="User">
+                        </a>
+                        <h4>{{cust_id.fullname}}</h4>
+                        <small>{{cust_id.contact}}</small>
+                        <br>
+                        <small>{{cust_id.email}}</small>
+                        <li class=""><a href="{% url 'profile'%}">
+                                <i class="zmdi zmdi-account"></i><span>My Profile</span></a></li>
+                        <li class=""><a href="">All Product</a></li>
+                    </div>
+                </div> -->
+                {% endif %}
+
+            </div>
+            </li>
+            </ul>
+        </div>
+       
+        </div>
+    </aside>
+    <!-- Right Sidebar -->
+    
+    
+    
+    {% block content %}
+    <section class="content home">
+        <div class="block-header">
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-12">
+                    <h2>Dashboard <small class="text-muted">Welcome to {{aid.shopName}}</small></h2>
+                </div>
+                
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="body">
+                            <h3 class="number count-to m-b-0" data-from="0" data-to="" data-speed="4500"
+                                data-fresh-interval="700"><i class="zmdi zmdi-trending-up float-right"></i></h3>
+                            <p class="text-muted">Total Product</p>
+                            <div class="progress">
+                                <div class="progress-bar l-blush" role="progressbar" aria-valuenow="68"
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                            </div>
+                            <small>Change 15%</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card">
+                        <div class="body">
+                            <h3 class="number count-to m-b-0" data-from="0" data-to="" data-speed="3500"
+                                data-fresh-interval="1000"><i class="zmdi zmdi-trending-up float-right"></i></h3>
+                            <p class="text-muted"> Total Emp</p>
+                            <div class="progress">
+                                <div class="progress-bar l-green" role="progressbar" aria-valuenow="68"
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                            </div>
+                            <small>Change 23%</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="card">
+                        <div class="body">
+                            <h3 class="number count-to m-b-0" data-from="0" data-to="284" data-speed="3500"
+                                data-fresh-interval="1000">284 <i class="zmdi zmdi-trending-up float-right"></i></h3>
+                            <p class="text-muted">Happy Clients <i class="zmdi zmdi-mood"></i></p>
+                            <div class="progress">
+                                <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="68"
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                            </div>
+                            <small>Change 50%</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+    <!-- Scripts -->
+    <script src="{% static 'app\assets\bundles\libscripts.bundle.js' %}"></script>
+    <script src="{% static 'app\assets\bundles\vendorscripts.bundle.js' %}"></script>
+    <script src="{% static 'app\assets\bundles\mainscripts.bundle.js' %}"></script>
+    <script src="{% static 'app\assets\bundles\morrisscripts.bundle.js' %}"></script>
+    <script src="{% static 'app\assets\bundles\jvectormap.bundle.js' %}"></script>
+    <script src="{% static 'app\assets\bundles\knob.bundle.js' %}"></script>
+    <script src="{% static 'app\assets\js\pages\index.js' %}"></script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/59f5afbbbb0c3f433d4c5c4c/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

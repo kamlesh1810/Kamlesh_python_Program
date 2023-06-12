@@ -1,0 +1,299 @@
+﻿{% extends 'index.html' %}
+
+{% block content %}
+<section class="content home">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                {% if uid.role == 'admin' %}
+                <div>
+                    <h2>Profile <small class="text-muted">Welcome to {{ aid.shopName}}</small></h2>
+                </div>
+                {% else %}
+                <div>
+                    <h2>Profile</h2>
+                </div>
+                {% endif %}
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 text-right">
+
+
+                <button class="btn btn-white btn-icon btn-round d-none d-md-inline-block float-right m-l-10"
+                    type="button">
+                    <i class="zmdi zmdi-edit"></i>
+                </button>
+
+                
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+
+        <div class="row clearfix profile-page">
+            <div class="col-lg-4 col-md-12">
+                <div class="card profile-header">
+                    <div class="body text-center">
+                        {% if uid.role == 'admin' %}
+                        <div class="profile-image">
+                            <img src="{{aid.pic.url }}" alt="">
+                        </div>
+                        {% else %}
+                        <div class="profile-image">
+                            <img src="" alt="">
+                        </div>
+                        {% endif %}
+                        <div>
+                            {% if uid.role == 'admin'%}
+                            <h4><strong>{{aid.usename}}</strong><small></small></h4>
+                            <small>{{aid.contact}}</small>
+                            <br>
+                            <small>{{uid.email}}</small>
+                            <br>
+                            <small>{{aid.cafeAddress}}</small>
+                            {% else %}
+                            <small></small>
+                            <br>
+                            <small></small>
+                            <br>
+                            <small></small>
+                            {% endif %}
+                            <div>
+                                <form action="{% url 'adminPicChange' %}" method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="file" class="form-control" name="pic">
+                                    </div>
+                                    <input type="submit" class="btn btn-info btn-round" name="submit" id="sbbtn"
+                                        value="Upload">
+                                    <hr>
+                                </form>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="card">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#about">About</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Account">Account</a></li>
+                    </ul>
+                    <div class="tab-content">
+
+                        <div class="tab-pane body active" id="about">
+                            {% if msg %}
+                            <div id="alert" class="btn btn-danger btn-round btn-lg btn-block" role="alert">
+                                {{msg}}
+                            </div>
+                            {% endif %}
+                            {% if uid.role == 'admin'%}
+
+                            <hr>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <p><strong>Name: </strong> {{aid.name}}</p>
+                                </li>
+                                
+                                <li>
+                                    <p><strong>Contact: </strong> {{aid.contact}}</p>
+                                </li>
+                                <li>
+                                    <p><strong>E-mail: </strong> {{aid.user_id}}</p>
+                                </li>
+                                <li>
+                                    <p><strong>Shop-Name: </strong> {{aid.shopName}}</p>
+                                </li>
+                                <li>
+                                    <p><strong>Address: </strong> {{aid.shopAddress}}</p>
+                                </li>
+                            </ul>
+
+                            {% else %}
+                            <ul class="list-unstyled">
+                                <li>
+                                    <p><strong>Name: </strong> </p>
+                                </li>
+                                <li>
+                                    <p><strong>Contact: </strong> </p>
+                                </li>
+                                <li>
+                                    <p><strong>E-mail: </strong> </p>
+                                </li>
+                                <li>
+                                    <p><strong>Address: </strong> </p>
+                                </li>
+                                <li>
+                                    <p><strong>Username: </strong> </p>
+                                </li> 
+                            </ul>
+                            {% endif %}
+                        </div>
+                        <div class="tab-pane body" id="Account">
+                            <form action="{% url 'adminPassChange' %}" method="POST">
+                                {% csrf_token %}
+                                <!-- Cafe owner password change -->
+                                {% if uid.role == 'admin' %}
+                                <div class="row clearfix">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" , placeholder="email"
+                                            value="{{uid.email}}" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="currentPassword"
+                                            placeholder="Current Password" id="opas">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="newPassword"
+                                            placeholder="New Password" id="pas" onkeyup="ckeck_pass()">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="confirmPassword"
+                                            placeholder="Confirm Password " id="cpas" onkeyup="check_pass()">
+                                    </div>
+                                </div>
+                                <input type="submit" class="btn btn-info btn-round" name="submit" id="sbbtn"
+                                    value="Save changes">
+                                <hr>
+
+                                {% else %}
+                                <!-- Customer password change -->
+                                <div class="row clearfix">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" , placeholder="email"
+                                            value="" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="currentPassword"
+                                            placeholder="Current Password" id="opas">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="newPassword"
+                                            placeholder="New Password" id="pas" onkeyup="ckeck_pass()">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="confirmPassword"
+                                            placeholder="Confirm Password " id="cpas" onkeyup="check_pass()">
+                                    </div>
+                                    <!-- <button class="btn btn-info btn-round">Save Changes</button> -->
+                                    <input type="submit" class="btn btn-info btn-round" name="submit" id="sbbtn"
+                                        value="Save changes">
+                                    <hr>
+                                </div>
+                                {% endif %}
+                            </form>
+                            <form action="{% url 'adminProfileChange' %}" method="POST">
+                                {% csrf_token %}
+                                <!-- Cafe Owner profile -->
+                                {% if uid.role == 'admin' %}
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Name" name="name"
+                                                value="{{ aid.name}}">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Shop-Name"
+                                                name="shopName" value="{{aid.shopName}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Contact" ,
+                                                name="contact" value="{{aid.contact}}" maxlength="10" minlength="10">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group m-b-10">
+                                            <textarea rows="4" class="form-control no-resize"
+                                                placeholder="Enter your address" name="shopAddress">{{aid.shopAddress}}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="submit" class="btn btn-primary btn-round" name=""
+                                            value="Save Changes">
+                                    </div>
+                                </div>
+                                {% else %}
+                                <!-- User profile -->
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Name" name="fullname"
+                                                value="{{ cust_id.fullname}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Contact" name="contact"
+                                                value="{{cust_id.contact}}" maxlength="10" minlength="10">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Email" , name="email"
+                                                value="{{cust_id.email}}">
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-lg-6 col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Username" ,
+                                                name="username" value="">
+                                        </div>
+                                    </div> -->
+                                    <div class="col-md-12">
+                                        <div class="form-group m-b-10">
+                                            <textarea rows="4" class="form-control no-resize"
+                                                placeholder="Enter your address" name="address"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="submit" class="btn btn-primary btn-round" name=""
+                                            value="Save Changes">
+                                    </div>
+                                </div>
+                                {% endif %}
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    function check_pass() {
+        let p = $('#pas').val();
+        let cp = $('#cpas').val();
+        let oldPassword = $('#opas').val();
+        // alert(p);
+        // alert(cp);
+        // $('#opas'.css('border', '1px solid green'))
+        if (p == cp) {
+            $('#pas').css('border', '1px solid green');
+            $('#cpas').css('border', '1px solid green');
+            $('#sbbtn').removeAttr('disabled')
+        } else {
+            $('#pas').css('border', '1px solid red');
+            $('#cpas').css('border', '1px solid red');
+            // $('#sbbtn').attr('disabled', 'disabled')
+            $('#sbbtn').attr('disabled', 'disabled')
+        }
+    }
+    setTimeout(function () {
+                $('#alert').hide();
+            }, 3000);
+</script>
+{% endblock %}
