@@ -17,3 +17,4 @@ for i in li1:
     for j in li2:
         if i == j:
             print(True)
+        

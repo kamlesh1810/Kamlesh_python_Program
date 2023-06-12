@@ -1,8 +1,8 @@
-# num = int(input("Enter a number: "))
-# sum = 0
-# for i in range(0, num):
-#     sum = sum+i
-# print("Total is : ", sum)
+num = int(input("Enter a number: "))
+sum = 0
+for i in range(0, num):
+    sum = sum+i
+print("Total is : ", sum)
 
 # num = 5   sum=0   i=5
 #   sum (15)= sum+i (10+5)

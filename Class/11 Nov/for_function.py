@@ -21,11 +21,11 @@ Function --> It  is a piece of code which performs a specfic task
 
 
 
-def name(str):
-    return "Hello " +str
+# def name(str):
+#     return "Hello " +str
 
-chr=input("Enter your Name: ")  
-print(name(chr))  
+# chr=input("Enter your Name: ")  
+# print(name(chr))  
 
 
  

@@ -57,25 +57,81 @@ Q.	Explain what does django-admin.py make messages command is used for?
 
 Ans-->	 This command line executes over the entire source tree of the current directory and abstracts all the strings marked for 		translation. It makes a message file in the locale directory.
 
+
 -------------------------------------------------------------------------------------------------------------------------------------
 
 
 Q. 	What is Django URLs?make program to create django urls?
 
-Ans-->	URL is a path through which a specific web-based application and one particular page in that web application can be reached. 	So for any web-oriented application setting these url paths is a very key necessity. 
+Ans-->	A URL is a web address. For example:- google.com is also a URL.
+	In Django, we use URLconf, which is a set of patterns that Django will try to match the requested URL to find the correct 		view.
 
-	1. Creating a url USING PATH()
+	Creating a url USING PATH()
+	The path method allows returning of an element to be included in URL patterns tuple which will be used as an url pattern. This 	was introduced in Django version 2.0 along with the re_path() method.
+	
+	Syntax:
+	path(route, view, kwargs=None, name=None)
 	
 
+	Example:
+	urls,.py
+	from django.contrib import admin
+	from django.conf.urls import url,include
+	from django.urls import path
+	from Django_app1 import views
+	admin.autodiscover()
+	urlpatterns = [
+	path('index/',views.template_view,name='template'),
+	url(r'^myapp/', include('Django_app1.urls')),
+	url(r'admin/', admin.site.urls),
+	]
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	What is a QuerySet? Write program to create a new Post object in database: 	
+
+Ans. 	QuerySet :- A QuerySet is a collection of data from a database. A QuerySet is built up as a list of objects. QuerySets makes 	            it easier to get the data you actually need, by allowing you to filter and order the data at an early stage.	
+
+
+	Create a new Post object in database:-
+
+	def example register ( request ):
+		if request.method == ’POST ’ :
+		   username = request.POST.get['username']
+		   password = request.POST.get ['password']
+		   email = request.POST.get['email']
+		   user = User.objects .create_user ( 
+			username, email, password 
+		   )
+		   user.save ()
+		   return render(request,'myApp\index.html')
+
+
+	In the above example we are taking the values one by one i.e username, password etc.	
 
 
 
 
+-------------------------------------------------------------------------------------------------------------------------------------
 
 
 
-		
-	
+Q.	Mention what command line can be used to load data into Django? 
+
+Ans. 	'Django-admin.py loaddata' is the command line can be used to load data into django.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q.	Explain what does django-admin.py make messages command is used for?
+
+Ans. 	django-admin is Django’s command-line utility for administrative tasks.	Generally, when working on a single Django project, it’s easier to use manage.py than django-admin. If you need to switch between multiple Django settings files, use django-admin with DJANGO_SETTINGS_MODULE or the --settings command line option. The command-line examples throughout this document use django-admin to be consistent, but any example can use manage.py or python -m django just as well.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 

@@ -3,3 +3,5 @@ for i in tup:
     if tup.count(i) > 1:
         print('REPEATED',i)
         
+
+

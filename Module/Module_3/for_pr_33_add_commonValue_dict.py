@@ -10,5 +10,5 @@ for i in d2:
       d2[i] = d2[i] + d1[i]
    else:
       pass
-result = d1 | d2
+result = d1|d2
 print(result)

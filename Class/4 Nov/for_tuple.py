@@ -1,5 +1,3 @@
-from traceback import print_tb
-
 
 t=('a','b','c','d','a',6,3,2,5,[],2,2.3,True,False)
 print(t)

@@ -1,7 +1,7 @@
 from collections import Counter
 my_dict = {'A': 67, 'B': 23, 'C': 45,'D': 56, 'E': 12, 'F': 69}
 k = Counter(my_dict)
-
+print(k)
 # Finding 3 highest values
 high = k.most_common(3)
 

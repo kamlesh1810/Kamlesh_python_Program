@@ -1,4 +1,4 @@
-li = ['Vikash', 'Purvesh', 'Chinky', 'Anant', 'Harshit']
+li = ['Vikash', 'Chinky', 'Purvesh', 'Anant', 'Harshit']
 str = " "
 print(li)
 str=str.join(li)
