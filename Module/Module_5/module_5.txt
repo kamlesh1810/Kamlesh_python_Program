@@ -7,7 +7,8 @@ Ans-->	Django is a highly powerful framework for building small and large scale 
 	Step 2: pip install virtualenv
 	Step 3: virtualenv -p python <environment_name>
 	Step 4: cd <environment_name>
-	Step 5: \Scripts\activate	Step 6: pip install django
+	Step 5: \Scripts\activate
+	Step 6: pip install django
 	Step 7: django-admin startproject <project_name>
 	Step 8: Running the Test Server	(python manage.py runserver)
 
